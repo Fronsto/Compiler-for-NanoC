@@ -1,0 +1,325 @@
+
+------------------------------------------------------------------------------------------------------------------------
+THREE ADDRESS CODE (TAC): 
+------------------------------------------------------------------------------------------------------------------------
+0: 	bubbleSort: 
+1: 	t0 = 0
+2: 	i = t0
+3: 	t1 = 1
+4: 	t2 = n - t1
+5: 	if i < t2 goto 11
+6: 	goto 42
+7: 	t3 = 1
+8: 	t4 = i + t3
+9: 	i = t4
+10: 	goto 3
+11: 	t5 = n - i
+12: 	t6 = 1
+13: 	t7 = t5 - t6
+14: 	a = t7
+15: 	t8 = 0
+16: 	j = t8
+17: 	if j < a goto 23
+18: 	goto 7
+19: 	t9 = 1
+20: 	t10 = j + t9
+21: 	j = t10
+22: 	goto 17
+23: 	t11 = arr[j]
+24: 	t12 = 1
+25: 	t13 = j + t12
+26: 	t14 = arr[t13]
+27: 	if t11 > t14 goto 30
+28: 	goto 19
+29: 	goto 40
+30: 	t15 = arr[j]
+31: 	temp = t15
+32: 	t16 = 1
+33: 	t17 = j + t16
+34: 	t18 = arr[t17]
+35: 	arr[j] = t18
+36: 	t19 = 1
+37: 	t20 = j + t19
+38: 	arr[t20] = temp
+39: 	goto 19
+40: 	goto 19
+41: 	goto 7
+42: 	return 
+43: 	
+44: 	binarySearch: 
+45: 	if r >= l goto 48
+46: 	goto 79
+47: 	goto 79
+48: 	t0 = r - l
+49: 	t1 = 2
+50: 	t2 = t0 / t1
+51: 	t3 = l + t2
+52: 	mid = t3
+53: 	t4 = arr[mid]
+54: 	if t4 == x goto 57
+55: 	goto 59
+56: 	goto 59
+57: 	return mid
+58: 	goto 59
+59: 	t5 = arr[mid]
+60: 	if t5 > x goto 63
+61: 	goto 71
+62: 	goto 71
+63: 	param l
+64: 	t6 = 1
+65: 	t7 = mid - t6
+66: 	param t7
+67: 	param x
+68: 	t8 = call binarySearch, 3
+69: 	return t8
+70: 	goto 71
+71: 	t9 = 1
+72: 	t10 = mid + t9
+73: 	param t10
+74: 	param r
+75: 	param x
+76: 	t11 = call binarySearch, 3
+77: 	return t11
+78: 	goto 79
+79: 	t12 = 1
+80: 	t13 = -t12
+81: 	return t13
+82: 	
+83: 	main: 
+84: 	t0 = 0
+85: 	param t0
+86: 	t1 = call printStr, 1
+87: 	t2 = 1
+88: 	param t2
+89: 	t3 = call printStr, 1
+90: 	param ep
+91: 	t4 = call readInt, 1
+92: 	n = t4
+93: 	t5 = 2
+94: 	param t5
+95: 	t6 = call printStr, 1
+96: 	t7 = 0
+97: 	i = t7
+98: 	if i < n goto 104
+99: 	goto 108
+100: 	t8 = 1
+101: 	t9 = i + t8
+102: 	i = t9
+103: 	goto 98
+104: 	param ep
+105: 	t10 = call readInt, 1
+106: 	arr[i] = t10
+107: 	goto 100
+108: 	t11 = 3
+109: 	param t11
+110: 	t12 = call printStr, 1
+111: 	param ep
+112: 	t13 = call readInt, 1
+113: 	x = t13
+114: 	param n
+115: 	t14 = call bubbleSort, 1
+116: 	t15 = 4
+117: 	param t15
+118: 	t16 = call printStr, 1
+119: 	t17 = 0
+120: 	i = t17
+121: 	if i < n goto 127
+122: 	goto 135
+123: 	t18 = 1
+124: 	t19 = i + t18
+125: 	i = t19
+126: 	goto 121
+127: 	t20 = arr[i]
+128: 	a = t20
+129: 	param a
+130: 	t21 = call printInt, 1
+131: 	t22 = 5
+132: 	param t22
+133: 	t23 = call printStr, 1
+134: 	goto 123
+135: 	t24 = 6
+136: 	param t24
+137: 	t25 = call printStr, 1
+138: 	t26 = 0
+139: 	param t26
+140: 	t27 = 1
+141: 	t28 = n - t27
+142: 	param t28
+143: 	param x
+144: 	t29 = call binarySearch, 3
+145: 	result = t29
+146: 	t30 = 1
+147: 	t31 = -t30
+148: 	if result == t31 goto 151
+149: 	goto 155
+150: 	goto 160
+151: 	t32 = 7
+152: 	param t32
+153: 	t33 = call printStr, 1
+154: 	goto 160
+155: 	t34 = 8
+156: 	param t34
+157: 	t35 = call printStr, 1
+158: 	param result
+159: 	t36 = call printInt, 1
+160: 	t37 = 9
+161: 	param t37
+162: 	t38 = call printStr, 1
+163: 	t39 = 0
+164: 	return t39
+165: 	
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+Table Name: Global
+------------------------------------------------------------------------------------------------------------------------
+Name                     Type                Initial Value                 Size           Offset         Category       
+------------------------------------------------------------------------------------------------------------------------
+arr                      arr(10,int)         0                             40             0              
+binarySearch             func                not-applicable                0              40             func
+bubbleSort               func                not-applicable                0              40             func
+main                     func                not-applicable                0              40             func
+printInt                 func                not-applicable                0              40             func
+printStr                 func                not-applicable                0              40             func
+readInt                  func                not-applicable                0              40             func
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Table Name: binarySearch  |  Return Type: int
+------------------------------------------------------------------------------------------------------------------------
+Name                     Type                Initial Value                 Size           Offset         Category       
+------------------------------------------------------------------------------------------------------------------------
+l                        int                 undefined                     4              0              param
+mid                      int                 undefined                     4              4              
+r                        int                 undefined                     4              8              param
+retVal                   int                 undefined                     4              12             
+t0                       int                 undefined                     4              16             
+t1                       int                 2                             4              20             
+t10                      int                 undefined                     4              24             
+t11                      int                 undefined                     4              28             
+t12                      int                 1                             4              32             
+t13                      int                 undefined                     4              36             
+t2                       int                 undefined                     4              40             
+t3                       int                 undefined                     4              44             
+t4                       int                 undefined                     4              48             
+t5                       int                 undefined                     4              52             
+t6                       int                 1                             4              56             
+t7                       int                 undefined                     4              60             
+t8                       int                 undefined                     4              64             
+t9                       int                 1                             4              68             
+x                        int                 undefined                     4              72             param
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Table Name: bubbleSort  |  Return Type: void
+------------------------------------------------------------------------------------------------------------------------
+Name                     Type                Initial Value                 Size           Offset         Category       
+------------------------------------------------------------------------------------------------------------------------
+a                        int                 undefined                     4              0              
+i                        int                 undefined                     4              4              
+j                        int                 undefined                     4              8              
+n                        int                 undefined                     4              12             param
+t0                       int                 0                             4              16             
+t1                       int                 1                             4              20             
+t10                      int                 undefined                     4              24             
+t11                      int                 undefined                     4              28             
+t12                      int                 1                             4              32             
+t13                      int                 undefined                     4              36             
+t14                      int                 undefined                     4              40             
+t15                      int                 undefined                     4              44             
+t16                      int                 1                             4              48             
+t17                      int                 undefined                     4              52             
+t18                      int                 undefined                     4              56             
+t19                      int                 1                             4              60             
+t2                       int                 undefined                     4              64             
+t20                      int                 undefined                     4              68             
+t3                       int                 1                             4              72             
+t4                       int                 undefined                     4              76             
+t5                       int                 undefined                     4              80             
+t6                       int                 1                             4              84             
+t7                       int                 undefined                     4              88             
+t8                       int                 0                             4              92             
+t9                       int                 1                             4              96             
+temp                     int                 undefined                     4              100            
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Table Name: main  |  Return Type: int
+------------------------------------------------------------------------------------------------------------------------
+Name                     Type                Initial Value                 Size           Offset         Category       
+------------------------------------------------------------------------------------------------------------------------
+a                        int                 undefined                     4              0              
+ep                       ptr(int)            undefined                     4              4              
+i                        int                 undefined                     4              8              
+n                        int                 undefined                     4              12             
+result                   int                 undefined                     4              16             
+retVal                   int                 undefined                     4              20             
+t0                       ptr(char)           "\n\tBubble Sort and Binary Search\n\n"4              24             
+t1                       int                 undefined                     4              28             
+t10                      int                 undefined                     4              32             
+t11                      ptr(char)           "Enter the element to be searched: "4              36             
+t12                      int                 undefined                     4              40             
+t13                      int                 undefined                     4              44             
+t14                      void                undefined                     0              48             
+t15                      ptr(char)           "The sorted array is: "       4              48             
+t16                      int                 undefined                     4              52             
+t17                      int                 0                             4              56             
+t18                      int                 1                             4              60             
+t19                      int                 undefined                     4              64             
+t2                       ptr(char)           "Enter the number of elements in the array: "4              68             
+t20                      int                 undefined                     4              72             
+t21                      int                 undefined                     4              76             
+t22                      ptr(char)           " "                           4              80             
+t23                      int                 undefined                     4              84             
+t24                      ptr(char)           "\n"                          4              88             
+t25                      int                 undefined                     4              92             
+t26                      int                 0                             4              96             
+t27                      int                 1                             4              100            
+t28                      int                 undefined                     4              104            
+t29                      int                 undefined                     4              108            
+t3                       int                 undefined                     4              112            
+t30                      int                 1                             4              116            
+t31                      int                 undefined                     4              120            
+t32                      ptr(char)           "\nElement is not present in array"4              124            
+t33                      int                 undefined                     4              128            
+t34                      ptr(char)           "\nElement is present at index "4              132            
+t35                      int                 undefined                     4              136            
+t36                      int                 undefined                     4              140            
+t37                      ptr(char)           "\n"                          4              144            
+t38                      int                 undefined                     4              148            
+t39                      int                 0                             4              152            
+t4                       int                 undefined                     4              156            
+t5                       ptr(char)           "Enter the elements of the array: "4              160            
+t6                       int                 undefined                     4              164            
+t7                       int                 0                             4              168            
+t8                       int                 1                             4              172            
+t9                       int                 undefined                     4              176            
+x                        int                 undefined                     4              180            
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Table Name: printInt  |  Return Type: int
+------------------------------------------------------------------------------------------------------------------------
+Name                     Type                Initial Value                 Size           Offset         Category       
+------------------------------------------------------------------------------------------------------------------------
+num                      int                 undefined                     4              0              param
+retVal                   int                 undefined                     4              4              
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Table Name: printStr  |  Return Type: int
+------------------------------------------------------------------------------------------------------------------------
+Name                     Type                Initial Value                 Size           Offset         Category       
+------------------------------------------------------------------------------------------------------------------------
+c                        ptr(char)           undefined                     4              0              param
+retVal                   int                 undefined                     4              4              
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+Table Name: readInt  |  Return Type: int
+------------------------------------------------------------------------------------------------------------------------
+Name                     Type                Initial Value                 Size           Offset         Category       
+------------------------------------------------------------------------------------------------------------------------
+eP                       ptr(int)            undefined                     4              0              param
+retVal                   int                 undefined                     4              4              
+------------------------------------------------------------------------------------------------------------------------
+
