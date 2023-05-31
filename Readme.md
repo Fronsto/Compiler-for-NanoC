@@ -2,10 +2,17 @@
 This is a part of a course assignment I did in my sixth semester at IIT Guwahati in the course Implementation of Programming Languages Lab. 
 It uses **Flex** for lexical analysis, **Bison** for syntax and semantic analysis, and finally the generated quad array (three address code) is converted to the target x86-64 assembly by the C++ program. 
 
-## Description of NanoC
-NanoC is a subset of C, with various of its core functionalities including pointers, single dimensional arrays, functions, separate global and function scopes, conditional statements with boolean expressions and iteration statements. 
+## What the heck is NanoC, I hear you ask
+NanoC is a subset of C with most of its core features, designed to ease up the assignment (making a compiler for C with all its details and intricacies would be too much and would take a lot more time than half a semester). It includes, among other things, support for 
+- pointers, 
+- 1D arrays, 
+- boolean expressions, 
+- functions (with support for recursive calls), 
+- iterative statements (for loop), 
+- conditional statements (if-else) and 
+- separate function scopes. 
 
-// ... expand but be concise
+[Assignment3](/Assignment3) contains the entire description of NanoC (with its Lexical Grammar and Phase Structure Grammar).
 
 ## Working of the Compiler
 // ... to complete
