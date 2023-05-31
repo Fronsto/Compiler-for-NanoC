@@ -29,7 +29,7 @@ Some resources that helped me in building this-
 - [Bison's Manual](https://www.gnu.org/software/bison/manual/)
 - [NASM tutorial](https://cs.lmu.edu/~ray/notes/nasmtutorial/)
 - [Stack Frame Layout by Eli Bendersky](https://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64/)
-- GCC compiler (I ran gcc -S on simple C programs to see how it generated the assembly)
+- The GCC compiler (The way I took its help was via running gcc -S on simple C programs to see how it generated the assembly)
 
 ## Unresolved issues
 1. functions must end with a return statement. The last statement should be a return statement.
