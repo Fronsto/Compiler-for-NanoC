@@ -12,7 +12,7 @@ NanoC is a subset of C with most of its core features, designed to ease up the a
 - conditional statements (if-else) and 
 - separate function scopes. 
 
-[Assignment3](/Assignment3) contains the entire description of NanoC (with its Lexical Grammar and Phase Structure Grammar).
+[Assignment3](/Assignment\ 3) contains the entire description of NanoC (with its Lexical Grammar and Phase Structure Grammar).
 
 ## Working of the Compiler
 // ... to complete
