@@ -39,10 +39,17 @@ Parsers are [PDAs](https://courses.cs.washington.edu/courses/cse431/19au/Parsing
 
 The parser bison generates works by applying shift-reduce operations. When it recieves a token, it shifts it onto the stack. But if the parser sees the list of tokens on top of the stack can be reduced to a single one, it reduces them (its a bottom-up parser). There's also a look-ahead token (it parses LALR(1) grammar) - it waits for the next token before applying a reduce operation. All this is gonna be important to prevent conflicts in the parsing process. Even if there are conflicts, bison can parse the grammar perfectly - it just won't be as efficient, since bison is optimized to parse LALR(1) grammars.
 
-## The C++ Program
+## The C++ Program - from the quad array to assembly code
 The final stage is the generation of the assembly code. Actually there's an optimization phase also - where we reduce the number of instructions generated from the previous phase - but in this implemenation we skipped that. 
 
-First lets talk about the 2 data structures used - quad array and symbol table. In general, the intermediate code generated can be stored in various formats. The one used here is Quad Array - a 4 tuple (operation, arg1, arg2, result).
+### Before we go on to assembly code generation
+First lets talk about the 2 data structures used - quad array and symbol table. In general, the intermediate code generated can be stored in various formats. The one used here is Quad Array - a 4 tuple (operation, arg1, arg2, result). Purpose of the symbol table it know during the compilation which all symbols have been spotted, and for the final code generation to know how much space is needed.
+Additionally, take a note of these 2 things -
+- **Scopes**. Actions are executed - like changing the symbol table. When compiler reads a function definition, it creates a new symbol table, switches to it, so now all symbols spotted are stored in this symbol table. This way, scopes are defined.
+- **Branch statements**. Like if, or for loop. When reducing those, the grammar is augmented with markers for gotos. Where to go to? thats left hinged, stored and knitted together when these branch statements are reduced. Doing this is called “backpatching”.
+
+### Now, about generation of assembly code
+Since this implemenation didn't include optimization of the intermediate code, it was mostly just printing out the corresponding instructions in assembly. The one thing we had to do here was implementing functions - with proper handling of the stack.
 
 // to be completed...
 
